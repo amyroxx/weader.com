@@ -1,4 +1,5 @@
 import React from "react";
+import Navigation from "./Navigation"
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -43,6 +44,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <Navigation/>
     </motion.div>
   );
 };

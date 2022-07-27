@@ -67,8 +67,8 @@
   align-items: center;
 }
 .icon {
-  width: 13%;
-  height: 50%;
+  width: 10%;
+  height: 30%;
   margin-right: 20px;
   background-color: rgba(0, 0, 0, 0.494);
   border-radius: 5px;
@@ -84,9 +84,9 @@
   justify-content: center;
 }
 .burger {
-  width: 50%;
-  height: 50%;
-  background-image: url(./assets/ellipsis-vertical-solid.svg);
+  width: 20%;
+  height: 30%;
+  background-image: url(./assets/bars-solid.svg);
   background-position: center;
   background-repeat: no-repeat;
   filter: invert(1);
