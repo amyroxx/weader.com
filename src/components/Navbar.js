@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="nav">
         <div className="logo">
           <div className="logo-main">Weader.com</div>
@@ -13,7 +18,7 @@ const Navbar = () => {
             <ul>
               <li>
                 {" "}
-                <Link to="/">Home</Link> 
+                <Link to="/">Home</Link>
               </li>
               <li>
                 {" "}
@@ -38,7 +43,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

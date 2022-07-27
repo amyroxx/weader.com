@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Clock from "react-live-clock";
 import axios from "axios";
 import Navbar from "./Navbar";
+import {motion} from 'framer-motion'
+
 
 
 const Weather = () => {
@@ -83,7 +85,10 @@ const Weather = () => {
   let currday = time.getDate();
   let date = currday + " " + longMonth + " " + year;
   return (
-    <>
+    <motion.div
+    initial={{opacity: 0}}
+    animate={{opacity:1}}
+    >
       <div className="app">
       <Navbar/>
         <div className="main">
@@ -169,7 +174,7 @@ const Weather = () => {
           )}
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 
