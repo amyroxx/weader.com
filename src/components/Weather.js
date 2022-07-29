@@ -3,6 +3,7 @@ import Clock from "react-live-clock";
 import axios from "axios";
 import Navbar from "./Navbar";
 import {motion} from 'framer-motion'
+import { Link } from "react-router-dom";
 
 
 
@@ -165,10 +166,10 @@ const Weather = () => {
                 </div>
               </div>
               <div className="forecast" id="lowerbtn">
-                <a href="">
+                <Link to="/forecast">
                 <h1>Forecast</h1>
                 <div className="arrow"></div>
-                </a>
+                </Link>
               </div>
             </div>
           )}

@@ -17,6 +17,7 @@ const Animatedroutes = () => {
           <Route path="/about" element={<About />} />
           <Route path="/social" element={<Social />} />
           <Route path="/Forecast" element={<Forecast />} /> 
+           
         </Routes>
       </AnimatePresence>
     </>
