@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Clock from "react-live-clock";
 import axios from "axios";
-import Navbar from "./Navbar";
 import {motion} from 'framer-motion'
 import { Link } from "react-router-dom";
+import * as FaIcons from "react-icons/fa";
+import * as AiIcons from "react-icons/ai";
+import * as IoIcons from 'react-icons/io'; 
 
 
 
@@ -42,18 +44,47 @@ const Weather = () => {
   useEffect(() => {
     fetchWeather();
   }, [latitude, longitude]);
+  
 
   // Code for the Clock :
   // session --> am/pm
   let session;
   let time = new Date();
   let hours = time.getHours();
-  if (hours > 12) {
+  let src;
+  let greeting;
+  if (hours >= 12) {
     session = "pm";
+    greeting = "Good Afternoon"
   } else if (hours < 12) {
     session = "am";
-  } else if (hours = 12) {
-    session = "pm";
+    greeting = "Good Morning"
+  } ;
+  if(5 < hours < 20){
+    src  = require('./icons/01d.png');
+  }
+  else if(20 < hours < 5 ){
+    src = require('./icons/01n.png');
+    greeting = "Good Evening"
+  }
+  
+  // Code for the WeatherType Icon 
+
+  let src2;
+  if(weather === "Clouds"){
+    src2 = require("./icons/04d.png");
+  }
+  else if (weather === "Clear"){
+    src2 = require("./icons/01d.png");
+  }
+  else if (weather === "Snow"){
+    src2 = require("./icons/13d.png");
+  }
+  else if (weather === "Extreme"){
+    src2 = require("./icons/11d.png");
+  }
+  else if (weather === "Rain"){
+    src2 = require("./icons/09d.png");
   }
   // code for the Weekday
   let weekday = time.getDay();
@@ -85,22 +116,22 @@ const Weather = () => {
   let longMonth = new Date().toLocaleString("en-us", { month: "long" });
   let currday = time.getDate();
   let date = currday + " " + longMonth + " " + year;
+
   return (
     <motion.div
     initial={{opacity: 0}}
     animate={{opacity:1}}
     >
       <div className="app">
-      <Navbar/>
         <div className="main">
          
           <div className="time">
             <div className="greet">
               <div className="icons">
-                <div className="day"></div>
+                <div className="day"> <img src={src}/>  </div>
               </div>
 
-              <div className="greeting">GoodMorning, Sir</div>
+              <div className="greeting">{greeting}</div>
             </div>
             <div className="info">
               <div className="clock">
@@ -144,31 +175,30 @@ const Weather = () => {
               <div className="weather-main">
                 <div className="feels">
                   <div className="weatherthingi">
-                    <div className="weather-icon"></div>
+                    <div className="weather-icon"><img src={src2} alt={weather.description} /></div>
                     <div className="weathertype">{weather}</div>
                   </div>
                   <div className="feelsliketemp">
-                    Feels like <br />
-                    <h1>{feels}</h1>
+                    Feels like: <br />
+                    <h1>{feels}°C</h1>
                   </div>
                 </div>
                 <div className="temp">
-                  <div className="temper">{temperature}</div>
+                  <div className="temper">{temperature}°C</div>
                   <p>Temprature</p>
                 </div>
               </div>
               <div className="forecast">
                 <div className="search">
                   <div className="searchbox" id="main">
-                    {cityName}
-                  </div>
+                    {cityName} 
                   <div className="location"></div>
+                  </div>
                 </div>
               </div>
               <div className="forecast" id="lowerbtn">
                 <Link to="/forecast">
                 <h1>Forecast</h1>
-                <div className="arrow"></div>
                 </Link>
               </div>
             </div>

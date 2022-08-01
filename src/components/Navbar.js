@@ -20,7 +20,7 @@ const Navbar = () => {
     >
       <div className="nav">
         <div className="logo">
-          <div className="logo-main">Weader.com</div>
+          <div className="logo-main"> <FaIcons.FaCloudSun/> <h1>Weader.com</h1></div>
         </div>
         <div className="navigation">
           <div className="navbar">
@@ -32,10 +32,6 @@ const Navbar = () => {
               <li>
                 {" "}
                 <Link to="/about">About me</Link>
-              </li>
-              <li>
-                {" "}
-                <Link to="/social">Social</Link>
               </li>
               <li>
                 {" "}
@@ -75,7 +71,7 @@ const Navbar = () => {
           </nav>
         </IconContext.Provider>
         <div className="ham">
-          <div className="icon menu-bars">
+          <div className="icon">
             <a  href="https://github.com/amyroxx/weader.com" target="_blank" rel="noreferrer"><AiIcons.AiFillCode/></a>
           </div>
         </div>

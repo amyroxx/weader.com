@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Clock from "react-live-clock";
 
-const Forecast = () => {
+const Thirdchild = () => {
   let date = new Date();
   let datetoday = date.getDate();
   let month = date.getMonth();
@@ -74,7 +74,7 @@ const Forecast = () => {
               </div>
               <div className="todays-weather-type">
                 <div className="weathers-type">
-                  <img src={require("./icons/01d.png")} alt="" />
+                  <img src={require("../icons/01d.png")} alt="" />
                   <p>Clear</p>
                 </div>
                 <div className="forecast-temp">29.C</div>
@@ -99,7 +99,7 @@ const Forecast = () => {
             <Link to="/Forecast/1">
               <div className="forecast-days">
                 <h1>24 Nov</h1>
-                <img src={require("./icons/04d.png")} alt="" />
+                <img src={require("../icons/04d.png")} alt="" />
                 <div className="forecast-humidity">
                   <p>Humidity</p>
                   <h1>34%</h1>
@@ -109,7 +109,7 @@ const Forecast = () => {
             <Link to="/Forecast/2">
               <div className="forecast-days">
                 <h1>24 Nov</h1>
-                <img src={require("./icons/04d.png")} alt="" />
+                <img src={require("../icons/04d.png")} alt="" />
                 <div className="forecast-humidity">
                   <p>Humidity</p>
                   <h1>34%</h1>
@@ -119,7 +119,7 @@ const Forecast = () => {
             <Link to="/Forecast/3">
               <div className="forecast-days">
                 <h1>24 Nov</h1>
-                <img src={require("./icons/04d.png")} alt="" />
+                <img src={require("../icons/04d.png")} alt="" />
                 <div className="forecast-humidity">
                   <p>Humidity</p>
                   <h1>34%</h1>
@@ -129,7 +129,7 @@ const Forecast = () => {
             <Link to="/Forecast/4">
               <div className="forecast-days">
                 <h1>24 Nov</h1>
-                <img src={require("./icons/04d.png")} alt="" />
+                <img src={require("../icons/04d.png")} alt="" />
                 <div className="forecast-humidity">
                   <p>Humidity</p>
                   <h1>34%</h1>
@@ -144,4 +144,4 @@ const Forecast = () => {
   );
 };
 
-export default Forecast;
+export default Thirdchild;
