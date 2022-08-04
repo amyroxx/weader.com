@@ -11,7 +11,7 @@ export const SidebarData = [
 
   {
     title: 'Forecast',
-    path: '/forecast',
+    path: '/Forecast',
     icon: <FaIcons.FaCloud />,
     cName: 'nav-text'
   },

@@ -7,6 +7,7 @@ import Firstchild from "./children/Firstchild";
 import Secondchild from "./children/Secondchild"
 import Thirdchild from "./children/Thirdchild"
 import Fourthchild from "./children/Fourthchild"
+import Notes from "./Notes"
 
 import { AnimatePresence } from "framer-motion";
 import Navbar from "./Navbar";
@@ -26,6 +27,7 @@ const Animatedroutes = () => {
             <Route path="/Forecast/3" element={<Thirdchild/>}></Route>
             <Route path="/Forecast/4" element={<Fourthchild/>}></Route>
             </Route>   
+            <Route to="/notes" element={<Notes/>}></Route>
         </Routes>
       </AnimatePresence>
     </>

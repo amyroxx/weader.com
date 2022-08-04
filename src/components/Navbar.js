@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import * as IoIcons from 'react-icons/io';
 import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
 import "./Navbar.css";
@@ -31,11 +30,15 @@ const Navbar = () => {
               </li>
               <li>
                 {" "}
-                <Link to="/about">About me</Link>
+                <Link to="/Forecast">Forecast</Link>
               </li>
               <li>
                 {" "}
-                <Link to="/forecast">Forecast</Link>
+                <Link to="/notes">Take Notes</Link>
+              </li>
+              <li>
+                {" "}
+                <Link to="/about">About me</Link>
               </li>
             </ul>
           </div>
@@ -65,14 +68,14 @@ const Navbar = () => {
                 );
               })}
               <li className="nav-text">
-              <a  href="https://github.com/amyroxx/weader.com" target="_blank" rel="noreferrer"><AiIcons.AiFillCode/><span>SourceCode</span></a>
+              <a  href="https://github.com/amyroxx/weader.com" target="_blank" rel="noreferrer"><img src={require("../assets/github.png")} alt="" /><span>SourceCode</span></a>
               </li>
             </ul>
           </nav>
         </IconContext.Provider>
         <div className="ham">
           <div className="icon">
-            <a  href="https://github.com/amyroxx/weader.com" target="_blank" rel="noreferrer"><AiIcons.AiFillCode/></a>
+            <a  href="https://github.com/amyroxx/weader.com" target="_blank" rel="noreferrer"><img src={require("../assets/github.png")} alt="" /></a>
           </div>
         </div>
       </div>

@@ -197,7 +197,7 @@ const Weather = () => {
                 </div>
               </div>
               <div className="forecast" id="lowerbtn">
-                <Link to="/forecast">
+                <Link to="/Forecast">
                 <h1>Forecast</h1>
                 </Link>
               </div>
