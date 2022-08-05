@@ -14,7 +14,7 @@
   height: 0;
   width: 0;
 }
-body {
+.main-div {
   background: url(./assets/bg.jpg) center center/cover;
   height: 100vh;
   width: 100vw;
@@ -433,6 +433,9 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.52);
   border-radius: 5px;
+}
+.graph canvas {
+  padding: 20px;
 }
 .forecast-divs {
   border-radius: 5px;
@@ -1154,3 +1157,4 @@ body {
     background-size: 20px;
   }
 }
+
