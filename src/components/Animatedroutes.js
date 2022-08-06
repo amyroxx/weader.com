@@ -20,12 +20,11 @@ const Animatedroutes = () => {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Weather />} />
           <Route path="/about" element={<About />} />
-          <Route path="/Forecast" element={<Forecast />}>
+          <Route path="/Forecast" element={<Forecast />}></Route> 
             <Route path="/Forecast/1" element={<Firstchild/>}></Route>
             <Route path="/Forecast/2" element={<Secondchild/>}></Route>
             <Route path="/Forecast/3" element={<Thirdchild/>}></Route>
-            <Route path="/Forecast/4" element={<Fourthchild/>}></Route>
-            </Route>   
+            <Route path="/Forecast/4" element={<Fourthchild/>}></Route>    
         </Routes>
       </AnimatePresence>
     </>

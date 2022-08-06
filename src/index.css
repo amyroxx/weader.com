@@ -480,7 +480,10 @@
   width: 65%;
   gap: 10px;
 }
-
+#selected-day{
+  background-color: rgba(0, 255, 255, 0.483);
+  color: black;
+}
 /* Media Queries for mobile view!  */
 
 @media only screen and (max-width: 600px) {
