@@ -238,7 +238,7 @@ const Forecast = () => {
                   <p>{weather}</p>
                 </div>
                 <div className="forecast-temp">
-                  {temperature1.temp ? temperature2.temp.toFixed() : null}°C
+                  {temperature2.temp ? temperature2.temp.toFixed() : null}°C
                 </div>
               </div>
             </div>

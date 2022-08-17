@@ -38,7 +38,7 @@ const Navbar = () => {
               </li>
               <li>
                 {" "}
-                <Link to="/about">About me</Link>
+                <a href="https://github.com/amyroxx">About Me</a>
               </li>
             </ul>
           </div>
